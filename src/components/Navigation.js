@@ -1,10 +1,12 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import Icon from '@ant-design/icons/lib/components/Icon';
+import { Layout, Menu } from 'antd';
+import { FileOutlined, AppstoreOutlined, CalendarOutlined, MessageOutlined, MailOutlined, InboxOutlined, WifiOutlined, CodepenOutlined } from "@ant-design/icons";
 import NavigationHeader from './Header';
 import CardHeader from './Card';
+import Graph from './BarChart';
+import LeftContainer from './LeftContainer';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
 class Navigation extends React.Component {
@@ -30,7 +32,7 @@ class Navigation extends React.Component {
             </Menu.Item>
             <SubMenu
               key="sub1"
-              title={<span><Icon type="user" /><span>Dashboard</span></span>}
+              title={<span><AppstoreOutlined /><span>Dashboard</span></span>}
             >
               <Menu.Item key="2">Ecommerce</Menu.Item>
               <Menu.Item key="3">Saas</Menu.Item>
@@ -40,45 +42,48 @@ class Navigation extends React.Component {
               <span>APLICATIONS</span>
             </Menu.Item>
             <Menu.Item key="6">
+            <CalendarOutlined />
               <span>Calender</span>
             </Menu.Item>
             <Menu.Item key="7">
+            <MessageOutlined />
               <span>Chat</span>
             </Menu.Item>
             <Menu.Item key="8">
+            <FileOutlined />
               <span>File Element</span>
             </Menu.Item>
             <SubMenu
               key="sub2"
-              title={<span><Icon type="team" /><span>Ecommerce</span></span>}
+              title={<span><InboxOutlined /><span>Ecommerce</span></span>}
             >
               <Menu.Item key="9">Team 1</Menu.Item>
               <Menu.Item key="10">Team 2</Menu.Item>
             </SubMenu>
             <SubMenu
-              key="sub2"
-              title={<span><Icon type="team" /><span>Email</span></span>}
+              key="sub3"
+              title={<span><MailOutlined /><span>Email</span></span>}
             >
               <Menu.Item key="11">Team 1</Menu.Item>
               <Menu.Item key="12">Team 2</Menu.Item>
             </SubMenu>
             <SubMenu
-              key="sub2"
-              title={<span><Icon type="team" /><span>Invoices</span></span>}
+              key="sub4"
+              title={<span><InboxOutlined /><span>Invoices</span></span>}
             >
               <Menu.Item key="13">Team 1</Menu.Item>
               <Menu.Item key="14">Team 2</Menu.Item>
             </SubMenu>
             <SubMenu
-              key="sub2"
-              title={<span><Icon type="team" /><span>Projects</span></span>}
+              key="sub5"
+              title={<span><InboxOutlined /><span>Projects</span></span>}
             >
               <Menu.Item key="15">Team 1</Menu.Item>
               <Menu.Item key="16">Team 2</Menu.Item>
             </SubMenu>
             <SubMenu
-              key="sub2"
-              title={<span><Icon type="team" /><span>Contacts</span></span>}
+              key="sub6"
+              title={<span><WifiOutlined /><span>Contacts</span></span>}
             >
               <Menu.Item key="17">Team 1</Menu.Item>
               <Menu.Item key="18">Team 2</Menu.Item>
@@ -94,7 +99,7 @@ class Navigation extends React.Component {
             </Menu.Item>
             <SubMenu
               key="sub2"
-              title={<span><Icon type="team" />Utility</span>}
+              title={<span><CodepenOutlined />Utility</span>}
             >
               <Menu.Item key="22">Team 1</Menu.Item>
               <Menu.Item key="23">Team 2</Menu.Item>
@@ -104,7 +109,7 @@ class Navigation extends React.Component {
             </Menu.Item>
             <SubMenu
               key="sub2"
-              title={<span><Icon type="team" />Utility</span>}
+              title={<span><InboxOutlined />Utility</span>}
             >
               <Menu.Item key="25">Team 1</Menu.Item>
               <Menu.Item key="26">Team 2</Menu.Item>
@@ -114,7 +119,7 @@ class Navigation extends React.Component {
             </Menu.Item>
             <SubMenu
               key="sub2"
-              title={<span><Icon type="team" />Forms</span>}
+              title={<span><InboxOutlined />Forms</span>}
             >
               <Menu.Item key="28">Team 1</Menu.Item>
               <Menu.Item key="29">Team 2</Menu.Item>
@@ -124,18 +129,18 @@ class Navigation extends React.Component {
         </Sider>
         <Layout>
          <NavigationHeader />
-         <CardHeader />
-          <Content style={{ margin: '0 16px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
-            </Breadcrumb>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              Bill is a cat.
-            </div>
+         <div className='bodyContainer'>
+          <div>
+          <CardHeader />
+          <Content>
+            <Graph />
           </Content>
+          </div>
+          <LeftContainer />
+         </div>
+
           <Footer style={{ textAlign: 'center' }}>
-            Ant Design ©2016 Created by Ant UED
+            Built By Kinyera Amos
           </Footer>
         </Layout>
       </Layout>
