@@ -9,7 +9,7 @@ const NavigationHeader = () => {
        <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse border d-flex justify-content-between" id="navbarTogglerDemo01">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">Dashboard</a>
     <div>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">

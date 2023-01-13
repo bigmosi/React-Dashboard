@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import Icon from '@ant-design/icons/lib/components/Icon';
 import NavigationHeader from './Header';
+import CardHeader from './Card';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -123,6 +124,7 @@ class Navigation extends React.Component {
         </Sider>
         <Layout>
          <NavigationHeader />
+         <CardHeader />
           <Content style={{ margin: '0 16px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
               <Breadcrumb.Item>User</Breadcrumb.Item>

@@ -1,9 +1,22 @@
 .MainContainerNav {
-    border: 2px solid red;
     height: 100vh;
 }
 
 .container {
     display: flex;
     justify-content: right;
+}
+
+.cardContainer {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.bg-blue {
+    background: rgb(173, 175, 230);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 10px;
 }
