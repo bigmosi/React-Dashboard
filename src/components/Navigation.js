@@ -1,31 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout, Menu } from 'antd';
 import { FileOutlined, AppstoreOutlined, CalendarOutlined, MessageOutlined, MailOutlined, InboxOutlined, WifiOutlined, CodepenOutlined } from "@ant-design/icons";
 import NavigationHeader from './Header';
 import CardHeader from './Card';
 import Graph from './BarChart';
 import LeftContainer from './LeftContainer';
+import hamburger from "../images/dashboard-menu.svg"
 
-const { Content, Footer, Sider } = Layout;
+
+import {
+  MenuOutlined,
+  CloseOutlined,
+} from '@ant-design/icons';
+
+export default function DashboardLayout() {
+  const [isMenuOpenedOnMobile, setIsMenuOpenedOnMobile] = useState(false);
+  const [isMenuCollapsedOnDesktop, setIsMenuCollapsedOnDesktop] =
+    useState(false);
+
+  const styles = isMenuOpenedOnMobile
+    ? { position: 'fixed', display: 'block', zIndex: '100' }
+    : {};
+
+  const { Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
-class Navigation extends React.Component {
-  state = {
-    collapsed: false,
-  };
-  onCollapse = (collapsed) => {
-    console.log(collapsed);
-    this.setState({ collapsed });
-  }
-  render() {
-    return (
-      <Layout style={{ minHeight: '100vh' }}>
-        <Sider
-          collapsible
-          collapsed={this.state.collapsed}
-          onCollapse={this.onCollapse}
+  return (
+    <Layout>
+      <Layout.Sider
+        trigger={null}
+        collapsible
+        collapsed={isMenuCollapsedOnDesktop}
+        width={250}
+        style={styles}
+      >
+        <div>
+          <div>
+            <CloseOutlined
+              onClick={() => setIsMenuOpenedOnMobile(false)}
+            />
+          </div>
+
+          <div>
+            <img
+              onClick={() =>
+                setIsMenuCollapsedOnDesktop(!isMenuCollapsedOnDesktop)
+              }
+              src={hamburger}
+              height={15}
+              width={80}
+              alt="Logo"
+              style={{ margin: 'auto' }}
+            />
+          </div>
+          {!isMenuCollapsedOnDesktop && (
+            <img
+              src=""
+              alt="Logo"
+              height={55}
+              width={95}
+              style={{ margin: 'auto', paddingLeft: '15px' }}
+            />
+          )}
+        </div>
+        <Menu
+          style={{ backgroundColor: '#11192B' }}
+          theme="dark"
+          mode="inline"
+          // @ts-ignore
         >
-          <div className="logo" />
+        </Menu>
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1">
               <span>Menu</span>
@@ -126,26 +170,56 @@ class Navigation extends React.Component {
             </SubMenu>
 
           </Menu>
-        </Sider>
-        <Layout>
-         <NavigationHeader />
-         <div className='bodyContainer'>
-          <div>
-          <CardHeader />
-          <Content>
-            <Graph />
-          </Content>
-          </div>
-          <LeftContainer />
-         </div>
+      </Layout.Sider>
 
-          <Footer style={{ textAlign: 'center' }}>
-            Built By Kinyera Amos
-          </Footer>
-        </Layout>
+      <Layout className="site-layout">
+        <Layout.Header
+          style={{ padding: 0, height: '80px' }}
+        >
+          <Menu
+            mode="horizontal"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              height: '100%',
+            }}
+          >
+            {!isMenuOpenedOnMobile && (
+              <div>
+                <MenuOutlined
+                  style={{ fontSize: '30px', marginRight: '10px' }}
+                  onClick={() => setIsMenuOpenedOnMobile(!isMenuOpenedOnMobile)}
+                />
+                <img
+                  src=""
+                  height={40}
+                  width={120}
+                  alt="darklight"
+                />
+              </div>
+            )}
+          </Menu>
+        </Layout.Header>
+        <Layout.Content
+        >
+            <Layout className='layutContainer'>
+          <NavigationHeader />
+          <div className='bodyContainer'>
+           <div className='main-contaner'>
+            <CardHeader />
+           <Content className='border mt-50'>
+             <Graph />
+           </Content>
+           </div>
+           <LeftContainer />
+          </div>
+           <Footer style={{ textAlign: 'center' }}>
+             Built By Kinyera Amos
+           </Footer>
+         </Layout>
+        </Layout.Content>
       </Layout>
-    );
-  }
+    </Layout>
+  );
 }
 
-export default Navigation;

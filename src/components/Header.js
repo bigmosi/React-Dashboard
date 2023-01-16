@@ -7,10 +7,10 @@ import USA from "../images/usa.png"
 const NavigationHeader = () => {
     return (
        <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary navContainer">
   <div className="container-fluid navContainer">
     <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarTogglerDemo01">
-      <a className="navbar-brand" href="/#">Dashboard</a>
+      <a className="navbar-brand  dashboard-title" href="/#">Dashboard</a>
     <div>
     <ul className="navbar-nav me-auto mb-2 mb-lg-0 sideIcon">
         <li className="nav-item">

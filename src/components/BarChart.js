@@ -1,28 +1,30 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie,Cell} from 'recharts';
-import StackedAreaChart from './AreaChart';
+import RechartsExample from './AreaChart';
+import ProductTable from './Product';
 
 
 import { Card, Col, Row } from 'antd';
 const Graph = () => (
   <div className="site-card-wrapper">
-    <Row gutter={16}>
+    <Row gutter={16} className="containerChart">
       <Col span={8}>
-        <Card bordered={false}>
-           <StackedAreaChart />
+        <Card bordered={false} className="line-graph" >
+        < RechartsExample />
         </Card>
       </Col>
       <Col span={8}>
-        <Card bordered={false}>
+        <Card bordered={false} className="pie-chart" >
           <PieCharts />
         </Card>
       </Col>
       <Col span={8}>
         <Card  bordered={false}>
-          Card content
+        <ProductTable />
         </Card>
       </Col>
     </Row>
+
   </div>
 );
 export default Graph;
@@ -39,11 +41,9 @@ class PieCharts extends PureComponent {
 
   render() {
     return (
-      <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
+      <PieChart width={200} height={300} onMouseEnter={this.onPieEnter}>
         <Pie
           data={data}
-          cx={120}
-          cy={200}
           innerRadius={60}
           outerRadius={80}
           fill="#8884d8"
