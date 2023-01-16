@@ -21,10 +21,6 @@
     margin-right: 10px;
 }
 
-.main {
-    margin-left: 17px;
-}
-
 .bodyContainer {
     display: flex;
     justify-content: space-around;
@@ -51,10 +47,7 @@
 
 .subCol {
     display: flex;
-}
-
-.site-card-border-less-wrapper {
-  border: 2px solid red;
+    justify-content: space-around;
 }
 
 .borderAround {
@@ -72,15 +65,27 @@
 }
 
 .containerChart {
-    border: 2px solid red;
-    width: 65rem;
+    width: 55rem;
     display: flex;
     justify-content: space-between;
+    margin: 20px;
 }
 
 .graph-container {
     border: 1px solid rgba(170, 182, 189, 0.4);
-    width: 20rem;
+    width: 18rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.graph-container2 {
+    margin-top: 20px;
+}
+
+.card-header-container {
+    border: 1px solid rgba(170, 182, 189, 0.4);
+    border-radius: 5px;
+    margin: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -113,7 +118,7 @@
         flex-direction: column;
         justify-content: center;
         width: 20rem;
-        margin-left: 2rem;
+        margin-left: 1.5rem;
     }
 
     /* .containerChart {
@@ -132,9 +137,10 @@
 
     .main {
         display: flex;
-        justify-content: center;
-        border: 2px solid red;
-        width: 100%;
+        border: 1px solid rgba(170, 182, 189, 0.4);
+        width: 22.5rem;
+        flex-direction: column;
+        margin-top: 10px;
     }
 
     .dashboard-title {
@@ -148,6 +154,6 @@
     }
 
     .product-table {
-        border: 2px solid red;
+        /* border: 2px solid red; */
     }
   }

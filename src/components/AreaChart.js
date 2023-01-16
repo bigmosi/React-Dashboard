@@ -1,5 +1,7 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { Dropdown, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 const data = [
   {
@@ -42,7 +44,16 @@ const data = [
 
 const RechartsExample = () => {
   return (
-    <LineChart width={250} height={300} data={data} dot={false}>
+    <div>
+       <div className='d-flex justify-content-between'>
+        <h5>User Activity</h5>
+        <Activity />
+       </div>
+       <div className="container-span">
+        <span>This Month</span>
+        <h5>16,543</h5>
+       </div>
+      <LineChart width={250} height={300} data={data} dot={false}>
       <Line type="monotone" dataKey="react" strke="#2196f3" dot={false} fill='red' />
       <Line type="monotone" dataKey="angular" strke="#2196f3" dot={false} />
       <Line type="monotone" dataKey="vue" strke="#2196f3" dot={false} />
@@ -52,7 +63,46 @@ const RechartsExample = () => {
       <Tooltip />
       <Legend />
     </LineChart >
+    </div>
   );
 }
+
+const items = [
+  {
+    key: '1',
+    type: 'group',
+    label: 'Jan',
+  },
+  {
+    key: '2',
+    label: 'Feb',
+  },
+  {
+    key: '3',
+    label: 'March',
+  },
+  {
+      key: '4',
+      label: 'April',
+    },
+    {
+      key: '5',
+      label: 'May',
+    },
+];
+const Activity = () => (
+  <Dropdown
+    menu={{
+      items,
+    }}
+  >
+    <div onClick={(e) => e.preventDefault()}>
+      <Space>
+        User Activity
+        <DownOutlined />
+      </Space>
+    </div>
+  </Dropdown>
+);
 
 export default RechartsExample;

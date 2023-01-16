@@ -2,9 +2,10 @@ import { Card, Col, Row } from 'antd';
 import { PieChartOutlined } from "@ant-design/icons";
 
 const CardHeader = () => (
-  <div className="site-card-wrapper">
+  <div className="site-card-wrapper border d-flex justify-content-around">
     <Row gutter={16} className="subCol">
-      <Col span={6} className="main">
+    <div className="card-header-container">
+        <div className="main">
         <Card bordered={false} className="innerCard">
           <div className="cardContainer">
           <div className='d-flex'>
@@ -17,8 +18,10 @@ const CardHeader = () => (
           <p>+2.56%</p>
           </div>
         </Card>
-      </Col>
-      <Col span={6} className="main">
+      </div>
+       </div>
+       <div className='card-header-container'>
+        <div className="main">
         <Card bordered={false} className="innerCard">
           <div className="cardContainer">
           <div className='d-flex'>
@@ -31,8 +34,10 @@ const CardHeader = () => (
           <p>+2.56%</p>
           </div>
         </Card>
-      </Col>
-      <Col span={6} className="main">
+      </div>
+       </div>
+       <div className='card-header-container'>
+          <div span={6} className="main">
         <Card bordered={false} className="innerCard">
           <div className="cardContainer">
           <div className='d-flex'>
@@ -45,7 +50,9 @@ const CardHeader = () => (
           <p>+2.56%</p>
           </div>
         </Card>
-      </Col>
+      </div>
+       </div>
+     
     </Row>
   </div>
 );

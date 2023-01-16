@@ -1,21 +1,21 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie,Cell} from 'recharts';
-import RechartsExample from './AreaChart';
+import { PieChart, Pie, Cell } from 'recharts';
 import ProductTable from './Product';
+import AreaRechartComponent from './AreaChartComponent';
 
 
 const Graph = () => (
-      <div className='d-flex containerChart'>
-       <div className='graph-container'>
-       < RechartsExample />
-       </div>
-       <div className='graph-container d-flex justify-content-center'>
-       <PieCharts />
-       </div>
-       <div className='graph-container'>
-       <ProductTable />
-       </div>
+  <div className='d-flex containerChart'>
+    <div className='graph-container'>
+      <AreaRechartComponent />
     </div>
+    <div className='graph-container d-flex justify-content-center'>
+      <PieCharts />
+    </div>
+    <div className='graph-container'>
+      <ProductTable />
+    </div>
+  </div>
 );
 export default Graph;
 
