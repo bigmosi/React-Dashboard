@@ -7,7 +7,6 @@ import Graph from './BarChart';
 import LeftContainer from './LeftContainer';
 import hamburger from "../images/dashboard-menu.svg"
 
-
 import {
   MenuOutlined,
   CloseOutlined,
@@ -30,6 +29,7 @@ const SubMenu = Menu.SubMenu;
       <Layout.Sider
         trigger={null}
         collapsible
+        className="sideNavigationBar"
         collapsed={isMenuCollapsedOnDesktop}
         width={250}
         style={styles}
@@ -37,6 +37,7 @@ const SubMenu = Menu.SubMenu;
         <div>
           <div>
             <CloseOutlined
+              className='text-white'
               onClick={() => setIsMenuOpenedOnMobile(false)}
             />
           </div>
@@ -51,17 +52,9 @@ const SubMenu = Menu.SubMenu;
               width={80}
               alt="Logo"
               style={{ margin: 'auto' }}
+              className="hamburger-menu"
             />
           </div>
-          {!isMenuCollapsedOnDesktop && (
-            <img
-              src=""
-              alt="Logo"
-              height={55}
-              width={95}
-              style={{ margin: 'auto', paddingLeft: '15px' }}
-            />
-          )}
         </div>
         <Menu
           style={{ backgroundColor: '#11192B' }}
@@ -187,6 +180,7 @@ const SubMenu = Menu.SubMenu;
             {!isMenuOpenedOnMobile && (
               <div>
                 <MenuOutlined
+                className='mobileNavigationBar'
                   style={{ fontSize: '30px', marginRight: '10px' }}
                   onClick={() => setIsMenuOpenedOnMobile(!isMenuOpenedOnMobile)}
                 />

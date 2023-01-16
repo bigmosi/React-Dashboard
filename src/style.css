@@ -66,7 +66,27 @@
     padding-left: 4px;
 }
 
+.sideNavigationBar {
+    width: 80vw;
+    background-color: #11192B;
+}
+
+.containerChart {
+    border: 2px solid red;
+    width: 65rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.graph-container {
+    border: 1px solid rgba(170, 182, 189, 0.4);
+    width: 20rem;
+}
+
 @media screen and (max-width: 768px) {
+    .sideNavigationBar {
+        display: none;
+    }
     .subCol {
         display: flex;
         justify-items: center;
@@ -92,7 +112,17 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 20rem;
+        margin-left: 2rem;
     }
+
+    /* .containerChart {
+        border: 2px solid red;
+        width: 60rem;
+        display: flex;
+        justify-content: space-between;
+    } */
+    
 
     .bodyContainer {
         display: flex;
@@ -111,5 +141,13 @@
         display: flex;
         justify-content: center;
         width: 15rem;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .product-table {
+        border: 2px solid red;
     }
   }

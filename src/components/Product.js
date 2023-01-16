@@ -5,7 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 
 const ProductTable = () => {
     return (
-        <div>
+        <div className="product-table">
             <div className="d-flex justify-content-between">
                 <h5>Top Product</h5>
                 <Monthly />

@@ -4,28 +4,18 @@ import RechartsExample from './AreaChart';
 import ProductTable from './Product';
 
 
-import { Card, Col, Row } from 'antd';
 const Graph = () => (
-  <div className="site-card-wrapper">
-    <Row gutter={16} className="containerChart">
-      <Col span={8}>
-        <Card bordered={false} className="line-graph" >
-        < RechartsExample />
-        </Card>
-      </Col>
-      <Col span={8}>
-        <Card bordered={false} className="pie-chart" >
-          <PieCharts />
-        </Card>
-      </Col>
-      <Col span={8}>
-        <Card  bordered={false}>
-        <ProductTable />
-        </Card>
-      </Col>
-    </Row>
-
-  </div>
+      <div className='d-flex containerChart'>
+       <div className='graph-container'>
+       < RechartsExample />
+       </div>
+       <div className='graph-container d-flex justify-content-center'>
+       <PieCharts />
+       </div>
+       <div className='graph-container'>
+       <ProductTable />
+       </div>
+    </div>
 );
 export default Graph;
 
