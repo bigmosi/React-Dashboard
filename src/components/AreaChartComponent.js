@@ -7,6 +7,8 @@ import {
    Tooltip,
    Legend
    } from "recharts";
+   import { Dropdown, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
    class AreaRechartComponent extends React.Component {
       data = [
          {
@@ -32,6 +34,15 @@ import {
       ];
       render() {
          return (
+         <div>
+            <div className='d-flex justify-content-between'>
+            <h5>User Activity</h5>
+            <Activity />
+           </div>
+           <div className="container-span">
+            <span>This Month</span>
+            <h5>16,543</h5>
+           </div>
             <AreaChart
                width={300}
                height={250}
@@ -39,7 +50,7 @@ import {
                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
                <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+                  <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}  />
                   <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
                </linearGradient>
                <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
@@ -56,7 +67,7 @@ import {
                dataKey="Product A"
                stroke="#8884d8"
                fillOpacity={1}
-               fill="url(#colorUv)"/>
+               fill="url(#colorUv)" />
             <Area
                type="monotone"
                dataKey="Procuct B"
@@ -64,7 +75,47 @@ import {
                fillOpacity={1}
                fill="url(#colorPv)"/>
             </AreaChart>
+         </div>
       );
    }
 }
+
+const items = [
+   {
+     key: '1',
+     type: 'group',
+     label: 'Jan',
+   },
+   {
+     key: '2',
+     label: 'Feb',
+   },
+   {
+     key: '3',
+     label: 'March',
+   },
+   {
+       key: '4',
+       label: 'April',
+     },
+     {
+       key: '5',
+       label: 'May',
+     },
+ ];
+ const Activity = () => (
+   <Dropdown
+     menu={{
+       items,
+     }}
+   >
+     <div onClick={(e) => e.preventDefault()}>
+       <Space>
+         User Activity
+         <DownOutlined />
+       </Space>
+     </div>
+   </Dropdown>
+ );
+ 
 export default AreaRechartComponent;

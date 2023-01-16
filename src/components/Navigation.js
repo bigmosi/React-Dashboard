@@ -168,6 +168,7 @@ export default function DashboardLayout() {
       <Layout className="site-layout">
         <Layout.Header
           style={{ padding: 0, height: '80px' }}
+          className="mobile-hambger"
         >
           <Menu
             mode="horizontal"

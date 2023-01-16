@@ -1,4 +1,4 @@
-import { Card, Col, Row } from 'antd';
+import { Card, Row } from 'antd';
 import { PieChartOutlined } from "@ant-design/icons";
 
 const CardHeader = () => (

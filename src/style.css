@@ -88,6 +88,10 @@
     margin: 10px;
 }
 
+.mobile-hambger {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .sideNavigationBar {
         display: none;
@@ -153,7 +157,7 @@
         display: none;
     }
 
-    .product-table {
-        /* border: 2px solid red; */
+    .mobile-hambger {
+        display: block;
     }
   }
