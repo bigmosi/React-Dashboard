@@ -8,14 +8,14 @@ const CardHeader = () => (
         <div className="main">
         <Card bordered={false} className="innerCard">
           <div className="cardContainer">
-          <div className='d-flex'>
-            <div className='bg-blue'><PieChartOutlined className='text-light' /></div>
+          <div className='d-flex innerCardContainer'>
+            <div className='bg-blue pie-card'><PieChartOutlined className='text-light' /></div>
             <div>
                <h6 className='text-primary'>Revenue</h6>
                <p>$21,456</p>
             </div>
           </div>
-          <p>+2.56%</p>
+          <p className='text-danger'>+2.56%</p>
           </div>
         </Card>
       </div>
@@ -24,14 +24,14 @@ const CardHeader = () => (
         <div className="main">
         <Card bordered={false} className="innerCard">
           <div className="cardContainer">
-          <div className='d-flex'>
-            <div className='bg-blue'><PieChartOutlined className='text-light' /></div>
+          <div className='d-flex innerCardContainer'>
+            <div className='bg-blue pie-card'><PieChartOutlined className='text-light' /></div>
             <div>
                <h6 className='text-primary'>Revenue</h6>
                <p>$21,456</p>
             </div>
           </div>
-          <p>+2.56%</p>
+          <p className='text-danger'>-0.84%</p>
           </div>
         </Card>
       </div>
@@ -40,14 +40,14 @@ const CardHeader = () => (
           <div span={6} className="main">
         <Card bordered={false} className="innerCard">
           <div className="cardContainer">
-          <div className='d-flex'>
-            <div className='bg-blue'><PieChartOutlined className='text-light' /></div>
+          <div className='d-flex innerCardContainer'>
+            <div className='bg-blue pie-card'><PieChartOutlined className='text-light' /></div>
             <div>
                <h6 className='text-primary'>Revenue</h6>
                <p>$21,456</p>
             </div>
           </div>
-          <p>+2.56%</p>
+          <p className='text-danger'>-1.04%</p>
           </div>
         </Card>
       </div>

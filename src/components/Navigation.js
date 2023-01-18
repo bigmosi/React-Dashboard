@@ -35,9 +35,9 @@ export default function DashboardLayout() {
         style={styles}
       >
         <div>
-          <div>
+          <div className='close-outline'>
             <CloseOutlined
-              className='text-white'
+              className='text-white outline'
               onClick={() => setIsMenuOpenedOnMobile(false)}
             />
           </div>
@@ -135,7 +135,7 @@ export default function DashboardLayout() {
             <span>Authentication</span>
           </Menu.Item>
           <SubMenu
-            key="sub2"
+            key="sub7"
             title={<span><CodepenOutlined />Utility</span>}
           >
             <Menu.Item key="22">Team 1</Menu.Item>
@@ -145,7 +145,7 @@ export default function DashboardLayout() {
             <span>UI Elements</span>
           </Menu.Item>
           <SubMenu
-            key="sub2"
+            key="sub8"
             title={<span><InboxOutlined />Utility</span>}
           >
             <Menu.Item key="25">Team 1</Menu.Item>
@@ -155,7 +155,7 @@ export default function DashboardLayout() {
             <span>UI Elements</span>
           </Menu.Item>
           <SubMenu
-            key="sub2"
+            key="sub9"
             title={<span><InboxOutlined />Forms</span>}
           >
             <Menu.Item key="28">Team 1</Menu.Item>

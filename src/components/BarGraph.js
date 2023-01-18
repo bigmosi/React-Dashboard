@@ -8,6 +8,7 @@ import {
   Legend,
   Tooltip
 } from "recharts";
+import SalesTable from "./SalesTable";
  
 const data = [
   {
@@ -64,9 +65,11 @@ const data = [
  
 export default function BarGraph() {
   return (
-    <>
-    <BarChart
-      width={800}
+    <div className="d-flex bar-container">
+      <SalesTable />
+       <div>
+       <BarChart
+      width={600}
       height={400}
       data={data}
       margin={{
@@ -86,6 +89,7 @@ export default function BarGraph() {
       <Bar dataKey="buy" fill="#8884d8" />
       <Bar dataKey="sell" fill="#82ca9d" />
     </BarChart>
-    </>
+       </div>
+    </div>
   );
 }

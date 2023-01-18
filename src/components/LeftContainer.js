@@ -1,5 +1,6 @@
 import React from "react";
 import { Card,  Progress } from 'antd';
+import { ExclamationCircleOutlined } from "@ant-design/icons";
 import USA from "../images/bestphoto.JPG";
 
 const LeftContainer = () => {
@@ -8,10 +9,11 @@ const LeftContainer = () => {
         <Card
           bordered={false}
         >
-             <div className="border bg-primary text-center">
+             
+          <div>
+          <div className="bg-primary text-center">
                 <img src={USA} alt="React Logo" style={{width: 60, borderRadius: 50}} />
               </div>
-          <div>
              <div className="text-center">
                 <h2>Jennifer</h2>
                 <p>Product Designer</p>
@@ -28,7 +30,11 @@ const LeftContainer = () => {
                 </div>
                 <hr />
                 <space>
+                  <div className="d-flex justify-content-between">
                     <p className="d-flex align-items-start">Earning</p>
+                    <ExclamationCircleOutlined className="exclamation-cricle" />
+                  </div>
+
                   <Progress type="circle" percent={76} />
                   <h2>$26,256</h2>
                   <p>Earning</p>
