@@ -1,4 +1,6 @@
 import React from "react";
+import { Dropdown, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 import {
   BarChart,
   Bar,
@@ -68,8 +70,12 @@ export default function BarGraph() {
     <div className="d-flex bar-container">
       <SalesTable />
        <div>
+        <div className="d-flex justify-content-end">
+          <span>Sort By:</span>
+          <Year />
+        </div>
        <BarChart
-      width={600}
+      width={350}
       height={400}
       data={data}
       margin={{
@@ -78,9 +84,7 @@ export default function BarGraph() {
         left: 20,
         bottom: 5
       }}
-      style={{
-        borderRadius: 10
-      }}
+      className="barchart-container"
     >
       <XAxis dataKey="name" />
       <YAxis />
@@ -93,3 +97,41 @@ export default function BarGraph() {
     </div>
   );
 }
+
+const items = [
+  {
+    key: '1',
+    type: 'group',
+    label: 'Jan',
+  },
+  {
+    key: '2',
+    label: 'Feb',
+  },
+  {
+    key: '3',
+    label: 'March',
+  },
+  {
+      key: '4',
+      label: 'April',
+    },
+    {
+      key: '5',
+      label: 'May',
+    },
+];
+const Year = () => (
+  <Dropdown
+     Monthlymenu={{
+      items,
+    }}
+  >
+    <div onClick={(e) => e.preventDefault()}>
+      <Space>
+        Yearly
+        <DownOutlined />
+      </Space>
+    </div>
+  </Dropdown>
+);

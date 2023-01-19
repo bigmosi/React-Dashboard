@@ -35,7 +35,7 @@ const NavigationHeader = () => {
           <a clasNames="nav-link" href="/#"><SettingOutlined /></a>
         </li>
         <li className="nav-item">
-          <a><Image width={35} height={30} src={photo} className="rounded-photo" /></a>
+          <a><img width={35} height={30} src={photo} className="rounded-photo" alt="" /></a>
         </li>
       </ul>
     </div>

@@ -5,7 +5,7 @@ import USA from "../images/bestphoto.JPG";
 
 const LeftContainer = () => {
     return (
-        <div className="site-card-border-less-wrapper">
+        <div className="profile-container">
         <Card
           bordered={false}
         >

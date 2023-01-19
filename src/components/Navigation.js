@@ -42,7 +42,7 @@ export default function DashboardLayout() {
             />
           </div>
 
-          <div>
+          <div className="d-flex justify-content-end">
             <img
               onClick={() =>
                 setIsMenuCollapsedOnDesktop(!isMenuCollapsedOnDesktop)
@@ -51,7 +51,6 @@ export default function DashboardLayout() {
               height={15}
               width={80}
               alt="Logo"
-              style={{ margin: 'auto' }}
               className="hamburger-menu"
             />
           </div>
@@ -185,12 +184,12 @@ export default function DashboardLayout() {
                   style={{ fontSize: '30px', marginRight: '10px' }}
                   onClick={() => setIsMenuOpenedOnMobile(!isMenuOpenedOnMobile)}
                 />
-                <img
+                {/* <img
                   src=""
                   height={40}
                   width={120}
                   alt="darklight"
-                />
+                /> */}
               </div>
             )}
           </Menu>

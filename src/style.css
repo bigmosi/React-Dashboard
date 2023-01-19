@@ -63,9 +63,9 @@
 }
 
 .containerChart {
-    width: 55rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 20px;
 }
 
@@ -73,7 +73,8 @@
     border: 1px solid rgba(170, 182, 189, 0.4);
     width: 18rem;
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
+    margin: 15px;
 }
 
 .graph-container2 {
@@ -84,7 +85,8 @@
     border: 1px solid rgba(170, 182, 189, 0.4);
     border-radius: 5px;
     margin: 10px;
-    width: 30%;
+    width: 50%;
+    flex-wrap: wrap;
 }
 
 .mobile-hambger {
@@ -118,10 +120,6 @@
 
 .innerCard {
     height: 57px;
-}
-
-.innerCardContainer {
-    margin-top: -20px;
 }
 
 .pie-card {
@@ -163,12 +161,14 @@
     }
     .subCol {
         display: flex;
-        justify-items: center;
+        /* justify-items: center; */
+        flex-direction: column;
     }
 
     .innerCard {
         margin: 5px;
         align-items: center;
+        width: 100%;
     }
 
     .navContainer {
@@ -186,8 +186,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 20rem;
+        width: 100%;
         margin-left: 1.5rem;
+    }
+
+    .graph-container {
+        display: flex;
+        justify-content: center;
     }
 
     /* .containerChart {
@@ -206,8 +211,8 @@
 
     .main {
         display: flex;
-        border: 1px solid rgba(170, 182, 189, 0.4);
-        width: 22.5rem;
+        /* border: 1px solid rgba(170, 182, 189, 0.4); */
+        width: 100%;
         flex-direction: column;
         margin-top: 10px;
     }
@@ -231,7 +236,6 @@
    }
 
    .sales-main {
-    border: 2px solid red;
     display: flex;
     justify-content: center;
    }
@@ -244,5 +248,13 @@
   .outline {
     font-size: 40px;
     margin-top: 5px;
+  }
+
+  .barchart-container {
+    width: 100%;
+  }
+
+  .card-header-container {
+    width: 90%;
   }
 }
